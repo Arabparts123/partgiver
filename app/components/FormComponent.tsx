@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from "react"
 import { TextField, Button, Grid, Typography } from "@mui/material"
 
@@ -131,7 +132,7 @@ export default function FormComponent() {
 
   return (
     <div className='max-w-4xl mx-auto xs:px-2'>
-      <div className='bg-blue-400 xs:py-0 my-5 md:mx-10'>
+      <div className='xs:py-0 my-5 md:mx-10'>
         <Typography
           variant='h4'
           className='font-bold text-center py-5 text-white bg-gray-800'
