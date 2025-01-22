@@ -5,6 +5,7 @@ import TestimonialSection from "./components/TestimonialSection"
 import PartCategoriesSection from "./components/ProductsType"
 import PartsDifferentiationSection from "./components/GenuineAftermarket"
 import CategoryTabs from "./components/PartsCategories"
+import FormComponent from "./components/FormComponent"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeaderCarousel />
       <PartCategoriesSection />
       <CategoryTabs />
+      <FormComponent />
 
       <PartsDifferentiationSection />
 
