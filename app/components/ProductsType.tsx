@@ -35,10 +35,10 @@ const PartCategoriesSection = () => {
   const theme = useTheme()
 
   return (
-    <section className='py-16 px-10 sm:px-5 xxs:px-3'>
+    <section className='py-16 px-10 sm:px-5 xxs:px-3 xs:px-3 s:px-3 '>
       <Typography
         variant='h4'
-        className='text-center font-bold mb-12'
+        className='text-center font-bold my-12 xs:my-6 s:my-6 xxs:my-6'
         sx={{
           color: theme.palette.primary.main,
         }}

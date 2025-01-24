@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import { TextField, Button, Grid, Typography } from "@mui/material"
+import theme from "../../src/styles/theme"
 
 export default function FormComponent() {
   const [Year, setYear] = useState("")
@@ -131,13 +132,16 @@ export default function FormComponent() {
   }
 
   return (
-    <div className='max-w-4xl mx-auto xs:px-2'>
+    <div className='max-w-4xl mx-auto'>
       <div className='xs:py-0 my-5 md:mx-10'>
         <Typography
           variant='h4'
-          className='font-bold text-center py-5 text-white bg-gray-800'
+          className='text-center font-bold my-12 xs:my-6 s:my-6 xxs:my-6'
+          sx={{
+            color: theme.palette.primary.main,
+          }}
         >
-          AUTO SPARE PARTS INQUIRY FORM
+          Auto Spare Parts Inquiry Form
         </Typography>
         <form
           id='myForm'

@@ -70,6 +70,44 @@ const theme = createTheme({
     },
   },
   spacing: 8,
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          margin: "8px 0", // Spacing around TextField
+          "& .MuiInputLabel-root": {
+            color: "#342b21", // Dark brown for label
+            fontWeight: 500,
+          },
+          "& .MuiInputLabel-root.Mui-focused": {
+            color: "#155a2c", // Primary green when focused
+          },
+          "& .MuiOutlinedInput-root": {
+            borderRadius: 8, // Rounded corners for the input field
+            backgroundColor: "#ffffff", // White background for input
+            "& fieldset": {
+              borderColor: "#d3d3d3", // Light gray border
+            },
+            "&:hover fieldset": {
+              borderColor: "#809461", // Light green border on hover
+            },
+            "&.Mui-focused fieldset": {
+              borderColor: "#155a2c", // Primary green border when focused
+            },
+          },
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        input: {
+          fontSize: 14, // Adjust font size for input text
+          color: "#342b21", // Dark brown for input text
+          padding: "10px 12px", // Padding inside the input field
+        },
+      },
+    },
+  },
 })
 
 export default theme

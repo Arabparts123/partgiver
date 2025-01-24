@@ -51,10 +51,11 @@ const PartsComparisonSection = () => {
   const theme = useTheme()
 
   return (
-    <section className='py-16 px-10 sm:px-5 xxs:px-3'>
+    <Box className='py-8 px-4 sm:px-5 xxs:px-3 xs:px-0 s:px-2'>
+      {/* Header */}
       <Typography
         variant='h4'
-        className='text-center font-bold mb-12'
+        className='text-center font-bold my-12 xs:my-6 s:my-6 xxs:my-6'
         sx={{
           color: theme.palette.primary.main,
         }}
@@ -62,24 +63,25 @@ const PartsComparisonSection = () => {
         Genuine vs Aftermarket Parts
       </Typography>
 
-      <Box className='overflow-x-auto'>
-        <table className='min-w-full table-auto border-separate border-spacing-0'>
+      {/* Responsive Table */}
+      <Box className='w-full overflow-x-auto xs:w-screen'>
+        <table className='w-full table-auto border-separate border-spacing-0'>
           <thead>
             <tr>
               <th
-                className='px-6 py-3 text-left text-sm font-medium text-gray-700 border-b border-gray-200'
+                className='px-4 py-2 text-left text-xs font-semibold text-white border-b border-gray-300 sm:px-3 s:px-2'
                 style={{ backgroundColor: theme.palette.primary.main }}
               >
                 Attribute
               </th>
               <th
-                className='px-6 py-3 text-left text-sm font-medium text-gray-700 border-b border-gray-200'
+                className='px-4 py-2 text-left text-xs font-semibold text-white border-b border-gray-300 sm:px-3 s:px-2'
                 style={{ backgroundColor: theme.palette.primary.main }}
               >
                 Genuine Parts
               </th>
               <th
-                className='px-6 py-3 text-left text-sm font-medium text-gray-700 border-b border-gray-200'
+                className='px-4 py-2 text-left text-xs font-semibold text-white border-b border-gray-300 sm:px-3 s:px-2'
                 style={{ backgroundColor: theme.palette.primary.main }}
               >
                 Aftermarket Parts
@@ -89,13 +91,13 @@ const PartsComparisonSection = () => {
           <tbody>
             {comparisonData.map((row, index) => (
               <tr key={index} className='odd:bg-gray-50 even:bg-gray-100'>
-                <td className='px-6 py-4 text-sm font-medium text-gray-900 border-b border-gray-200'>
+                <td className='px-4 py-3 text-sm font-medium text-gray-900 border-b border-gray-300 sm:px-3 s:px-2 max-w-[150px] break-words'>
                   {row.attribute}
                 </td>
-                <td className='px-6 py-4 text-sm text-gray-900 border-b border-gray-200'>
+                <td className='px-4 py-3 text-sm text-gray-900 border-b border-gray-300 sm:px-3 s:px-2 max-w-[150px] break-words'>
                   {row.genuine}
                 </td>
-                <td className='px-6 py-4 text-sm text-gray-900 border-b border-gray-200'>
+                <td className='px-4 py-3 text-sm text-gray-900 border-b border-gray-300 sm:px-3 s:px-2 max-w-[150px] break-words'>
                   {row.aftermarket}
                 </td>
               </tr>
@@ -104,15 +106,16 @@ const PartsComparisonSection = () => {
         </table>
       </Box>
 
+      {/* Footer */}
       <Typography
-        variant='body1'
-        className='mt-6 text-center text-sm'
+        variant='body2'
+        className='mt-4 text-center text-xs'
         sx={{ color: theme.palette.text.primary }}
       >
-        However, after weighing the pros and cons of both, you can make the best
-        choice for your needs. We provide both genuine and aftermarket parts.
+        After evaluating the pros and cons, choose the parts that suit your
+        needs. We offer both genuine and aftermarket parts for your convenience.
       </Typography>
-    </section>
+    </Box>
   )
 }
 

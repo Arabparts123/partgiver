@@ -6,14 +6,17 @@ import PartCategoriesSection from "./components/ProductsType"
 import PartsDifferentiationSection from "./components/GenuineAftermarket"
 import CategoryTabs from "./components/PartsCategories"
 import FormComponent from "./components/FormComponent"
+import CarBrandsGrid from "./components/BrandsWeDeal"
+import posts from "../CarBrandGrid"
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24 md:p-10 xs:p-5 xxs:p-5 sm:p-5 s:p-5'>
+    <main className='flex min-h-screen flex-col items-center justify-between lg:p-24 xl:p-24 xxl:p-24 md:p-10'>
       <HeaderCarousel />
       <PartCategoriesSection />
       <CategoryTabs />
       <FormComponent />
+      <CarBrandsGrid posts={posts} />
 
       <PartsDifferentiationSection />
 

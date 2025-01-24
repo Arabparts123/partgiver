@@ -132,6 +132,15 @@ export default function CategoryTabs() {
 
   return (
     <Box sx={{ maxWidth: "100%", bgcolor: "background.paper" }}>
+      <Typography
+        variant='h4'
+        className='text-center font-bold my-12 xs:my-6 s:my-6 xxs:my-6'
+        sx={{
+          color: theme.palette.primary.main,
+        }}
+      >
+        Parts we deal in
+      </Typography>
       <Tabs
         value={activeTab}
         onChange={handleTabChange}
